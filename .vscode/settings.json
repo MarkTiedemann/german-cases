@@ -1,0 +1,6 @@
+{
+	"deno.enable": true,
+	"editor.useTabStops": true,
+	"editor.wordWrap": "wordWrapColumn",
+	"editor.wordWrapColumn": 120
+}

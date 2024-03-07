@@ -1,0 +1,27 @@
+name: CI
+on:
+  push:
+    branches:
+      - master
+    tags:
+      - "*"
+jobs:
+  build:
+    runs-on: windows-latest
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup
+        uses: denoland/setup-deno@v1
+      - name: Format
+        run: deno fmt
+      - name: Lint
+        run: deno lint
+      - name: Test
+        run: deno test
+      - name: Publish
+        if: github.ref_type == 'tag'
+        run: deno publish
