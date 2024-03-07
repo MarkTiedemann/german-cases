@@ -5,6 +5,14 @@
  *
  * [Upper-case <q>ẞ</q> was adopted in standard German orthography in 2017.](https://www.rechtschreibrat.com/DOX/rfdr_PM_2017-06-29_Aktualisierung_Regelwerk.pdf) The standard Unicode algorithm for converting to uppercase, however, still uses <q>SS</q>.
  *
+ * @example
+ * ```ts
+ * import { toGermanUpperCase } from "@mark/german-cases";
+ *
+ * console.log("Straße".toLocaleUpperCase("de-DE")); // => "STRASSE"
+ * console.log(toGermanUpperCase("Straße")); // => "STRAẞE"
+ * ```
+ *
  * @module
  */
 
