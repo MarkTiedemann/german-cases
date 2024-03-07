@@ -1,10 +1,12 @@
 {
 	"name": "@mark/german-cases",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"exports": "./mod.ts",
 	"tasks": {
-		"dev": "deno fmt && deno lint && deno test && deno task doc",
-		"doc": "deno doc --html --name=@mark\\german-cases mod.ts"
+		"init-githooks": "git config core.hooksPath .githooks",
+		"dev": "deno fmt && deno lint && deno test && deno task doc && deno task publish-dry-run",
+		"doc": "deno doc --html --name=@mark\\german-cases mod.ts",
+		"publish-dry-run": "deno publish --dry-run --token=dry-run"
 	},
 	"exclude": [
 		"docs"
