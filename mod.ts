@@ -19,7 +19,7 @@ export const LOCALE_GERMAN_GERMANY = "de-DE" as const;
 
 /** Converts all alphabetic characters to German uppercase characters.
  *
- * Contrary to [`String.prototype.toLocaleUpperCase()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toLocaleUpperCase), this function coverts [lower-case <q>ß</q> (`U+00DF`)](https://symbl.cc/en/00DF/) into [upper-case <q>ẞ</q> (`U+1E9E`)](https://symbl.cc/en/1E9E/). */
+ * Contrary to [`String.prototype.toLocaleUpperCase()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toLocaleUpperCase), this function converts [lower-case <q>ß</q> (`U+00DF`)](https://symbl.cc/en/00DF/) into [upper-case <q>ẞ</q> (`U+1E9E`)](https://symbl.cc/en/1E9E/). */
 export function toGermanUpperCase(str: string): string {
 	return str.replaceAll(LOWER_CASE_ESZETT, UPPER_CASE_ESZETT).toLocaleUpperCase(LOCALE_GERMAN_GERMANY);
 }
