@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: CC0-1.0+
+
 /** A module to convert German strings to upper- or lowercase.
  *
  * Instead of converting [lower-case <q>ß</q> (`U+00DF`)](https://symbl.cc/en/00DF/)
@@ -13,7 +15,9 @@
  * console.log(toGermanUpperCase("Straße")); // => "STRAẞE"
  * ```
  *
- * @module
+ * @license CC0-1.0+
+ *
+ * @module @mark/german-cases
  */
 
 /** Lower-case Eszett: [ß (`U+00DF`)](https://symbl.cc/en/00DF/) */
